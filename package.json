@@ -8,10 +8,12 @@
     "start": "node server",
     "dev": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
     "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
+    "build-no-clean": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build --no-clean",
     "lint": "vue-cli-service lint",
     "pm2-start": "npx pm2 start server.js",
     "build-watch": "vue-cli-service build --watch --mode production",
     "build-and-start": "NODE_OPTIONS=--openssl-legacy-provider npm-run-all --parallel build start",
+    "build-no-clean-and-start": "NODE_OPTIONS=--openssl-legacy-provider npm-run-all --parallel build-no-clean start",
     "validate-config": "node services/config-validator",
     "health-check": "node services/healthcheck",
     "dependency-audit": "npx improved-yarn-audit --ignore-dev-deps"
